@@ -1,0 +1,62 @@
+.first {
+  background-image: url(./assets/home/mobile/image-header.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  position: relative;
+  height: 511px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.new {
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.4963814914226532;
+  letter-spacing: 10px;
+  font-weight: 400;
+}
+.xx99-first {
+  color: #fff;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 1.286px;
+  margin-top: 16px;
+}
+.first-p {
+  color: #fff;
+  text-align: center;
+  font-size: 15px;
+  line-height: 25px;
+  opacity: 0.75;
+  padding: 0 24px;
+  margin-top: 24px;
+}
+.first-btn {
+  width: 160px;
+  height: 48px;
+  background: #d87d4a;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  margin-top: 28px;
+}
+@media (min-width: 768px) {
+  .first {
+    background-image: url(./assets/home/tablet/image-header.jpg);
+  }
+}
+
+@media (min-width: 1440px) {
+  .first {
+    background-image: url(./assets/home/desktop/image-hero.jpg);
+  }
+}

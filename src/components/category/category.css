@@ -1,0 +1,42 @@
+.img-size {
+  width: 79.916px;
+  height: 104px;
+  position: relative;
+  top: -52px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cat-style {
+  width: 87.2%;
+
+  border-radius: 8px;
+  background: #f1f1f1;
+  margin: 68px auto 0;
+  position: relative;
+}
+.cat-title {
+  color: #000;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1.071px;
+  text-transform: uppercase;
+}
+.shop-div {
+  color: #000;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  padding: 17px 0 22px;
+}
+.ear-category {
+  width: 120px;
+  height: auto;
+}

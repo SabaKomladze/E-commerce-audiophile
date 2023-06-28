@@ -1,0 +1,101 @@
+.orange-div {
+  border-radius: 8px;
+  background: #d87d4a;
+  width: 87.2%;
+  margin: 0 auto;
+  background-image: url(./assets/home/desktop/pattern-circles.svg);
+  background-repeat: no-repeat;
+  background-size: 120%;
+  background-position: center -100px;
+  padding: 57px 0 55px;
+  margin-top: 120px;
+}
+.speaker-adv {
+  width: 172.248px;
+  height: 207px;
+  margin: 0 auto;
+  display: block;
+}
+.orange-title {
+  color: #fff;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 1.286px;
+  margin-top: 32px;
+}
+.orange-p {
+  color: #fff;
+  text-align: center;
+  font-size: 15px;
+  line-height: 25px;
+  opacity: 0.75;
+  margin-top: 24px;
+}
+.orange-btn {
+  width: 160px;
+  height: 48px;
+  background: #000;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin: 24px auto 0;
+  display: block;
+}
+.speaker-ad {
+  background-image: url(./assets/home/mobile/image-speaker-zx7.jpg);
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-size: cover;
+  width: 87.2%;
+  padding: 150px 24px;
+  border-radius: 8px;
+  margin: 24px auto;
+}
+.speaker-ad-title {
+  color: #000;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.speaker-ad-btn {
+  margin-top: 32px;
+  width: 160px;
+  height: 48px;
+  color: #000;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.ear-div-text {
+  padding: 41px 24px;
+  border-radius: 8px;
+  background: #f1f1f1;
+  margin: 0 auto;
+  width: 87.2%;
+  margin-top: 24px;
+}
+.ear-ad-title {
+  color: #000;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.ear-div-ad {
+  width: 87.2%;
+  background-image: url(./assets/home/mobile/image-earphones-yx1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 327px;
+  border-radius: 8px;
+  margin: 24px auto 0;
+}

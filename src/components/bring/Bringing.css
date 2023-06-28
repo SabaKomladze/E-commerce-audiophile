@@ -1,0 +1,36 @@
+.man {
+  background-image: url(./assets/shared/mobile/image-best-gear.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 8px;
+  width: 87.2%;
+  height: 300px;
+  margin: 0 auto;
+}
+.bring-div {
+  margin-top: 120px;
+}
+.man-text {
+  color: #000;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.bring-span {
+  color: #d87d4a;
+}
+.bring-p {
+  color: #000;
+  text-align: center;
+  font-size: 15px;
+  line-height: 25px;
+  opacity: 0.5;
+}
+.man-text {
+  padding: 0 24px;
+}
+.bring-text {
+  margin: 40px 0 32px;
+}
