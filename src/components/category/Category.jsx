@@ -1,4 +1,5 @@
 import "./category.css";
+import { Link } from "react-router-dom";
 function Category() {
   return (
     <div className="cat">
@@ -9,16 +10,18 @@ function Category() {
           className="head-category img-size"
         />
         <h5 className="cat-title">HEADPHONES</h5>
-        <div className="shop-div">
-          <p className="shop">shop</p>{" "}
-          <span className="shop-arrow">
-            <img
-              src="./assets/shared/desktop/icon-arrow-right.svg"
-              alt="arrow"
-              className="arrow"
-            />{" "}
-          </span>
-        </div>
+        <Link to="/headphones">
+          <div className="shop-div">
+            <p className="shop">shop</p>{" "}
+            <span className="shop-arrow">
+              <img
+                src="./assets/shared/desktop/icon-arrow-right.svg"
+                alt="arrow"
+                className="arrow"
+              />{" "}
+            </span>
+          </div>
+        </Link>
       </div>
       <div className="speak-cat cat-style">
         <img
@@ -27,16 +30,18 @@ function Category() {
           className="speaker-category img-size"
         />
         <h5 className="cat-title">SPEAKERS</h5>
-        <div className="shop-div">
-          <p className="shop">shop</p>{" "}
-          <span className="shop-arrow">
-            <img
-              src="./assets/shared/desktop/icon-arrow-right.svg"
-              alt="arrow"
-              className="arrow"
-            />{" "}
-          </span>
-        </div>
+        <Link to="/speakers">
+          <div className="shop-div">
+            <p className="shop">shop</p>{" "}
+            <span className="shop-arrow">
+              <img
+                src="./assets/shared/desktop/icon-arrow-right.svg"
+                alt="arrow"
+                className="arrow"
+              />{" "}
+            </span>
+          </div>
+        </Link>
       </div>
       <div className="ear-cat cat-style">
         <img
@@ -45,16 +50,18 @@ function Category() {
           className="ear-category img-size"
         />
         <h5 className="cat-title">EARPHONES</h5>
-        <div className="shop-div">
-          <p className="shop">shop</p>{" "}
-          <span className="shop-arrow">
-            <img
-              src="./assets/shared/desktop/icon-arrow-right.svg"
-              alt="arrow"
-              className="arrow"
-            />{" "}
-          </span>
-        </div>
+        <Link to="/earphones">
+          <div className="shop-div">
+            <p className="shop">shop</p>{" "}
+            <span className="shop-arrow">
+              <img
+                src="./assets/shared/desktop/icon-arrow-right.svg"
+                alt="arrow"
+                className="arrow"
+              />{" "}
+            </span>
+          </div>
+        </Link>
       </div>
     </div>
   );

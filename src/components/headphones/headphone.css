@@ -1,0 +1,53 @@
+.headName {
+  width: 100vw;
+  background-color: #000000;
+  color: #fff;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2px;
+  padding: 32px 0;
+}
+.prod-image {
+  width: 327px;
+  height: 352px;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+}
+.prod-head-list-title {
+  color: #000;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 24px;
+}
+.single-Headphone-List {
+  padding: 64px 24px 0;
+}
+.prod-new {
+  color: #d87d4a;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  margin-top: 32px;
+}
+.prod-head-list-p {
+  color: #000;
+  text-align: center;
+  font-size: 15px;
+  line-height: 25px;
+  opacity: 0.5;
+  margin: 24px 0 56px;
+}
+.prod-list {
+  display: block;
+  margin: 0 auto;
+}
