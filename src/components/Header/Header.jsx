@@ -1,24 +1,29 @@
 import "./Header.css";
-function Header() {
+import process from "process";
+function Header({ cartList, setCartList, setCartActive, cartActive }) {
   return (
     <header>
       <img
-        src="./assets/shared/tablet/icon-hamburger.svg"
+        src={"../public/assets/shared/tablet/icon-hamburger.svg"}
         alt="menu icon"
         className="menu"
       />
       <img
-        src="./assets/shared/desktop/logo.svg"
+        src={"../public/assets/shared/desktop/logo.svg"}
         alt="logo icon"
         className="logo"
       />
 
       <img
-        src="./assets/shared/desktop/icon-cart.svg"
+        src={"../public/assets/shared/desktop/icon-cart.svg"}
         alt="cart icon"
         className="cart"
+        onClick={() => {
+          setCartActive(!cartActive);
+        }}
       />
     </header>
   );
 }
+
 export default Header;

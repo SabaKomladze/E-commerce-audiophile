@@ -3,7 +3,7 @@ function Footer() {
   return (
     <footer>
       <img
-        src="./assets/shared/desktop/logo.svg"
+        src={"../assets/shared/desktop/logo.svg"}
         alt="logo icon"
         className="logo-footer"
       />
@@ -22,17 +22,17 @@ function Footer() {
       <p className="copyright">Copyright 2021. All Rights Reserved</p>
       <div className="social">
         <img
-          src="./assets/shared/desktop/icon-facebook.svg"
+          src={"../assets/shared/desktop/icon-facebook.svg"}
           alt="fb icon"
           className="fb"
         />
         <img
-          src="./assets/shared/desktop/icon-twitter.svg"
+          src={"../assets/shared/desktop/icon-twitter.svg"}
           alt="tw icon"
           className="tw"
         />
         <img
-          src="./assets/shared/desktop/icon-instagram.svg"
+          src={"../assets/shared/desktop/icon-instagram.svg"}
           alt="ig icon"
           className="ig"
         />

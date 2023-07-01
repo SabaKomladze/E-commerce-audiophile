@@ -7,19 +7,35 @@ import Headphones from "./components/headphones/Headphones";
 import Speakers from "./components/Speakers/Speakers";
 import Earphones from "./components/Earphone/Earphone";
 import Singleproduct from "./components/SingleProduct/SingleProduct";
+import MyContext from "./context";
+import ScrollToTop from "../utils/scrollTop";
+import Cart from "./components/Cart/Cart";
 function App() {
-  const [count, setCount] = useState(0);
-
+  const [childInfo, setChildInfo] = useState("");
+  const [cartList, setCartList] = useState([]);
+  const [cartActive, setCartActive] = useState(false);
+  const handleChildInfo = (info) => {
+    setChildInfo(info);
+  };
   return (
     <>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/headphones" element={<Headphones />} />
-        <Route path="/speakers" element={<Speakers />} />
-        <Route path="/earphones" element={<Earphones />} />
-        <Route path="/singleproduct" element={<Singleproduct />} />
-      </Routes>
+      {cartActive ? (
+        <Cart cartList={cartList} setCartList={setCartList} />
+      ) : null}
+      <Header setCartActive={setCartActive} cartActive={cartActive} />
+      <ScrollToTop />
+      <MyContext.Provider value={{ childInfo, handleChildInfo }}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route
+            path="/headphones"
+            element={<Headphones childInfo={childInfo} />}
+          />
+          <Route path="/speakers" element={<Speakers />} />
+          <Route path="/earphones" element={<Earphones />} />
+          <Route path="/headphones/:id" element={<Singleproduct />} />
+        </Routes>
+      </MyContext.Provider>
     </>
   );
 }

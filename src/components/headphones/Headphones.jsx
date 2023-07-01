@@ -5,7 +5,7 @@ import Category from "../category/Category";
 import Bringing from "../bring/Bringing";
 import Footer from "../folder/Footer";
 import { Link } from "react-router-dom";
-function Headphones() {
+function Headphones({ childInfo }) {
   const [filterHead, setFilterHead] = useState([]);
 
   useEffect(() => {
@@ -28,8 +28,7 @@ function Headphones() {
             <h1 className="prod-head-list-title">{prod.name}</h1>
             <p className="prod-head-list-p">{prod.description}</p>
             <Link
-              to="/singleproduct"
-              state={prod}
+              to={`/headphones/${prod.slug}`}
               className="first-btn prod-list"
             >
               See Product

@@ -1,0 +1,94 @@
+.prod-head-single-title {
+  color: #000;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.prod-head-single-p {
+  color: #000;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 25px;
+  opacity: 0.5;
+}
+.price {
+  color: #000;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1.286px;
+  text-transform: uppercase;
+}
+.num {
+  width: 120px;
+  height: 48px;
+  background: #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+.number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.single-btn {
+  width: 160px;
+  height: 48px;
+  background: #d87d4a;
+  color: #fff;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+}
+.min,
+.plus {
+  color: #000;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  opacity: 0.25;
+}
+.digit {
+  color: #000;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.gal {
+  width: 87.2%;
+  height: auto;
+}
+.feat {
+  color: #000;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 0.857px;
+  text-transform: uppercase;
+}
+.describ {
+  color: #000;
+  font-size: 15px;
+  line-height: 25px;
+  opacity: 0.5;
+}
+.suggestion {
+  width: 100%;
+}
