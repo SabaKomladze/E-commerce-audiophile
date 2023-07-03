@@ -21,3 +21,10 @@
 body {
   overflow-x: hidden;
 }
+a {
+  text-decoration: none;
+}
+button {
+  width: 160px;
+  height: 48px;
+}

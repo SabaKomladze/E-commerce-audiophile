@@ -5,18 +5,25 @@ import Bringing from "../bring/Bringing";
 import Footer from "../folder/Footer";
 import MyContext from "../../context";
 import datas from "../../../data.json";
-import { useState, useContext, useEffect } from "react";
-function Singleproduct() {
-  const { handleChildInfo } = useContext(MyContext);
+import { useState, useContext } from "react";
+function Singleproduct({ count, setCount }) {
   const params = useParams();
-  const [count, setCount] = useState(1);
-  // const [data, setData] = useState(null);
 
   const data = datas.find((item) => item.slug === params.id);
 
-  console.log(data);
+  const { cartList, setCartList } = useContext(MyContext);
+  console.log(cartList);
+  const addToCart = () => {
+    const product = {
+      image: `.${data.image.mobile}`,
+      title: data.name,
+      amount: data.price,
+    };
+    setCartList([...cartList, product]);
+  };
+
   return (
-    <div>
+    <div className="singleProd">
       <p className="back">Go Back</p>
       <img
         src={`.${data.image.mobile}`}
@@ -51,7 +58,7 @@ function Singleproduct() {
             +
           </p>
         </div>
-        <button type="button" className="single-btn">
+        <button type="button" className="single-btn" onClick={addToCart}>
           ADD TO CART
         </button>
       </div>

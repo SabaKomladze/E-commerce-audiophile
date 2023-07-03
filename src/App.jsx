@@ -14,17 +14,25 @@ function App() {
   const [childInfo, setChildInfo] = useState("");
   const [cartList, setCartList] = useState([]);
   const [cartActive, setCartActive] = useState(false);
+  const [count, setCount] = useState(1);
   const handleChildInfo = (info) => {
     setChildInfo(info);
   };
   return (
     <>
       {cartActive ? (
-        <Cart cartList={cartList} setCartList={setCartList} />
+        <Cart
+          cartList={cartList}
+          setCartList={setCartList}
+          count={count}
+          setCount={setCount}
+        />
       ) : null}
       <Header setCartActive={setCartActive} cartActive={cartActive} />
       <ScrollToTop />
-      <MyContext.Provider value={{ childInfo, handleChildInfo }}>
+      <MyContext.Provider
+        value={{ childInfo, handleChildInfo, cartList, setCartList }}
+      >
         <Routes>
           <Route path="/" element={<Home />} />
           <Route
@@ -33,7 +41,10 @@ function App() {
           />
           <Route path="/speakers" element={<Speakers />} />
           <Route path="/earphones" element={<Earphones />} />
-          <Route path="/headphones/:id" element={<Singleproduct />} />
+          <Route
+            path="/headphones/:id"
+            element={<Singleproduct count={count} setCount={setCount} />}
+          />
         </Routes>
       </MyContext.Provider>
     </>
