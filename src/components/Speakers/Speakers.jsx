@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import Category from "../category/Category";
 import Bringing from "../bring/Bringing";
 import Footer from "../folder/Footer";
+import { Link } from "react-router-dom";
+
 function Speakers() {
   const [filterHead, setFilterHead] = useState([]);
   useEffect(() => {
@@ -24,9 +26,11 @@ function Speakers() {
             {prod.new ? <p className="prod-new">NEW PRODUCT</p> : null}
             <h1 className="prod-head-list-title">{prod.name}</h1>
             <p className="prod-head-list-p">{prod.description}</p>
-            <button type="button" className="first-btn prod-list">
-              See Product
-            </button>
+            <Link to={`/speakers/${prod.slug}`}>
+              <button type="button" className="first-btn prod-list">
+                See Product
+              </button>
+            </Link>
           </div>
         ))}
       </div>

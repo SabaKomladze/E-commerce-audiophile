@@ -1,27 +1,40 @@
-import { useLocation, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import "./Singleproduct.css";
 import { Link } from "react-router-dom";
 import Bringing from "../bring/Bringing";
 import Footer from "../folder/Footer";
 import MyContext from "../../context";
 import datas from "../../../data.json";
-import { useState, useContext } from "react";
-function Singleproduct({ count, setCount }) {
+import { useState, useContext, useEffect } from "react";
+function Singleproduct() {
   const params = useParams();
+  const [count, setCount] = useState(1);
 
   const data = datas.find((item) => item.slug === params.id);
 
   const { cartList, setCartList } = useContext(MyContext);
   console.log(cartList);
   const addToCart = () => {
+    setCount(1);
     const product = {
       image: `.${data.image.mobile}`,
       title: data.name,
-      amount: data.price,
+      price: data.price,
+      amount: count,
     };
     setCartList([...cartList, product]);
-  };
+    localStorage.setItem("cartList", JSON.stringify(cartList));
 
+    console.log(product);
+  };
+  // useEffect(() => {
+  //   const storedCartList = localStorage.getItem("cartList");
+  //   if (storedCartList) {
+  //     setCartList(JSON.parse(storedCartList));
+  //   }
+  //   console.log(storedCartList);
+  //   console.log(cartList);
+  // }, []);
   return (
     <div className="singleProd">
       <p className="back">Go Back</p>

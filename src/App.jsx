@@ -10,23 +10,29 @@ import Singleproduct from "./components/SingleProduct/SingleProduct";
 import MyContext from "./context";
 import ScrollToTop from "../utils/scrollTop";
 import Cart from "./components/Cart/Cart";
+import { useEffect } from "react";
 function App() {
   const [childInfo, setChildInfo] = useState("");
   const [cartList, setCartList] = useState([]);
   const [cartActive, setCartActive] = useState(false);
-  const [count, setCount] = useState(1);
   const handleChildInfo = (info) => {
     setChildInfo(info);
   };
+  useEffect(() => {
+    if (cartActive) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "visible";
+    }
+  }, [cartActive]);
   return (
     <>
       {cartActive ? (
-        <Cart
-          cartList={cartList}
-          setCartList={setCartList}
-          count={count}
-          setCount={setCount}
-        />
+        <>
+          <div className="theme">
+            <Cart cartList={cartList} setCartList={setCartList} />
+          </div>
+        </>
       ) : null}
       <Header setCartActive={setCartActive} cartActive={cartActive} />
       <ScrollToTop />
@@ -41,10 +47,9 @@ function App() {
           />
           <Route path="/speakers" element={<Speakers />} />
           <Route path="/earphones" element={<Earphones />} />
-          <Route
-            path="/headphones/:id"
-            element={<Singleproduct count={count} setCount={setCount} />}
-          />
+          <Route path="/headphones/:id" element={<Singleproduct />} />
+          <Route path="/speakers/:id" element={<Singleproduct />} />
+          <Route path="/earphones/:id" element={<Singleproduct />} />
         </Routes>
       </MyContext.Provider>
     </>
