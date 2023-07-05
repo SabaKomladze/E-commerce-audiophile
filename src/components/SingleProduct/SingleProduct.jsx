@@ -24,17 +24,15 @@ function Singleproduct() {
     };
     setCartList([...cartList, product]);
     localStorage.setItem("cartList", JSON.stringify(cartList));
-
-    console.log(product);
   };
-  // useEffect(() => {
-  //   const storedCartList = localStorage.getItem("cartList");
-  //   if (storedCartList) {
-  //     setCartList(JSON.parse(storedCartList));
-  //   }
-  //   console.log(storedCartList);
-  //   console.log(cartList);
-  // }, []);
+  useEffect(() => {
+    const cartData = JSON.parse(localStorage.getItem("cartList")) || [];
+    setCartList(cartData);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("cartList", JSON.stringify(cartList));
+  }, [cartList]);
   return (
     <div className="singleProd">
       <p className="back">Go Back</p>
