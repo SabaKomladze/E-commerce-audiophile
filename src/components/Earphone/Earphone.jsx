@@ -6,16 +6,19 @@ import Footer from "../folder/Footer";
 import { Link } from "react-router-dom";
 function Earphone() {
   const [filterHead, setFilterHead] = useState([]);
+
   useEffect(() => {
     const filterHeader = data.filter((prod) => prod.category === "earphones");
     setFilterHead(filterHeader);
   }, []);
-  console.log(filterHead);
+
   return (
     <div>
       <div className="headName">Earphones</div>
       <div>
-        <p className="back">Go Back</p>
+        <Link to="/">
+          <p className="back">Go Back</p>
+        </Link>
         {filterHead.map((prod, index) => (
           <div key={index} className="single-Headphone-List">
             <img

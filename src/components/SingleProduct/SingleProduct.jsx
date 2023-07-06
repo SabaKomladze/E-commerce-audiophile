@@ -4,12 +4,15 @@ import { Link } from "react-router-dom";
 import Bringing from "../bring/Bringing";
 import Footer from "../folder/Footer";
 import MyContext from "../../context";
+
 import datas from "../../../data.json";
-import { useState, useContext, useEffect } from "react";
+import { useState, useContext, useEffect, React } from "react";
 function Singleproduct() {
   const params = useParams();
   const [count, setCount] = useState(1);
-
+  const goBack = () => {
+    window.history.back();
+  };
   const data = datas.find((item) => item.slug === params.id);
 
   const { cartList, setCartList } = useContext(MyContext);
@@ -35,7 +38,9 @@ function Singleproduct() {
   }, [cartList]);
   return (
     <div className="singleProd">
-      <p className="back">Go Back</p>
+      <p className="back" onClick={goBack}>
+        Go Back
+      </p>
       <img
         src={`.${data.image.mobile}`}
         alt="product image"

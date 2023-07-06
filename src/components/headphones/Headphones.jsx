@@ -17,6 +17,9 @@ function Headphones({ childInfo }) {
     <div>
       <div className="headName">HEADPHONES</div>
       <div>
+        <Link to="/">
+          <p className="back">Go Back</p>
+        </Link>
         {filterHead.map((prod, index) => (
           <div key={index} className="single-Headphone-List">
             <img
