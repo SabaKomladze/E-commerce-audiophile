@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 import "./Cart.css";
 import React, { useEffect, useState } from "react";
-function Cart({ cartList, setCartList }) {
+function Cart({ cartList, setCartList, setCartActive }) {
   const [total, setTotal] = useState(0);
 
   useEffect(() => {
@@ -65,9 +66,17 @@ function Cart({ cartList, setCartList }) {
         <p className="total-tit">Total</p>
         <p className="total-num">${total}</p>
       </div>
-      <button type="button" className="checkout">
-        CHECKOUT
-      </button>
+      <Link to="/checkout">
+        <button
+          type="button"
+          className="checkout"
+          onClick={() => {
+            setCartActive(false);
+          }}
+        >
+          CHECKOUT
+        </button>
+      </Link>
     </div>
   );
 }

@@ -10,6 +10,7 @@ import Singleproduct from "./components/SingleProduct/SingleProduct";
 import MyContext from "./context";
 import ScrollToTop from "../utils/scrollTop";
 import Cart from "./components/Cart/Cart";
+import Checkout from "./components/Checkout/Checkout";
 import { useEffect } from "react";
 function App() {
   const [childInfo, setChildInfo] = useState("");
@@ -30,7 +31,11 @@ function App() {
       {cartActive ? (
         <>
           <div className="theme">
-            <Cart cartList={cartList} setCartList={setCartList} />
+            <Cart
+              cartList={cartList}
+              setCartList={setCartList}
+              setCartActive={setCartActive}
+            />
           </div>
         </>
       ) : null}
@@ -50,6 +55,7 @@ function App() {
           <Route path="/headphones/:id" element={<Singleproduct />} />
           <Route path="/speakers/:id" element={<Singleproduct />} />
           <Route path="/earphones/:id" element={<Singleproduct />} />
+          <Route path="/checkout" element={<Checkout />} />
         </Routes>
       </MyContext.Provider>
     </>
