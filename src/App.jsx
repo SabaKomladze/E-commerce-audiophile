@@ -16,6 +16,7 @@ function App() {
   const [childInfo, setChildInfo] = useState("");
   const [cartList, setCartList] = useState([]);
   const [cartActive, setCartActive] = useState(false);
+  const [total, setTotal] = useState(0);
   const handleChildInfo = (info) => {
     setChildInfo(info);
   };
@@ -35,6 +36,8 @@ function App() {
               cartList={cartList}
               setCartList={setCartList}
               setCartActive={setCartActive}
+              total={total}
+              setTotal={setTotal}
             />
           </div>
         </>
@@ -55,7 +58,17 @@ function App() {
           <Route path="/headphones/:id" element={<Singleproduct />} />
           <Route path="/speakers/:id" element={<Singleproduct />} />
           <Route path="/earphones/:id" element={<Singleproduct />} />
-          <Route path="/checkout" element={<Checkout />} />
+          <Route
+            path="/checkout"
+            element={
+              <Checkout
+                cartList={cartList}
+                setCartList={setCartList}
+                total={total}
+                setTotal={setTotal}
+              />
+            }
+          />
         </Routes>
       </MyContext.Provider>
     </>

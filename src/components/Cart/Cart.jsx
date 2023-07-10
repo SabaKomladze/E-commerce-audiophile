@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom";
 import "./Cart.css";
 import React, { useEffect, useState } from "react";
-function Cart({ cartList, setCartList, setCartActive }) {
-  const [total, setTotal] = useState(0);
-
+function Cart({ cartList, setCartList, setCartActive, total, setTotal }) {
   useEffect(() => {
     const newTotal = cartList.reduce(
       (sum, item) => sum + item.amount * item.price,

@@ -18,7 +18,7 @@
 .radio {
   display: none;
 }
-.e-mone::before {
+.e-mone {
   content: "";
   border: 1px solid #cfcfcf;
   border-radius: 50%;
@@ -29,7 +29,30 @@
   cursor: pointer;
   left: 21px;
 }
-.deliver input:checked,
-.e-mon input:checked {
-  border: 2px solid orange;
+.e-mone-sec {
+  content: "";
+  border: 1px solid #cfcfcf;
+  border-radius: 50%;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 20px;
+  cursor: pointer;
+  left: 21px;
+}
+.e-mone::before,
+.e-mone-sec::before {
+  content: "";
+  border: 1px solid #cfcfcf;
+  border-radius: 50%;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: -7px;
+  cursor: pointer;
+  left: -7.5px;
+}
+.b-prise,
+.grand {
+  color: black;
 }
