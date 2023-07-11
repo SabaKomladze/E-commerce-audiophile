@@ -15,58 +15,63 @@ function Checkout({ cartList, total }) {
       <p className="back" onClick={goBack}>
         Go Back
       </p>
-      <h1 className="checkout-title">CHECKOUT</h1>
+      <h1 className="checkout-title same">CHECKOUT</h1>
       <div className="billing-div">
         <h6 className="billing">Billing details</h6>
-        <div className="name-div">
-          <label>Name</label>
+        <div className="name-div inputdiv">
+          <label className=" same">Name</label>
           <input
             className="inp-name input"
             type="text"
             placeholder="Alexei Ward"
           />
         </div>
-        <div className="email-div">
-          <label>Email</label>
+        <div className="email-div  inputdiv">
+          <label className=" same">Email</label>
           <input
             className="inp-email input"
             type="email"
             placeholder="alexei@mail.com"
           />
         </div>
-        <div className="num-div">
-          <label>Phone Number</label>
+        <div className="num-div  inputdiv">
+          <label className=" same">Phone Number</label>
           <input
             className="inp-num input"
-            type="number"
+            type="text"
             placeholder="+1 202-555-0136"
           />
         </div>
       </div>
-      <div className="shipping-div">
+      <div className="shipping-div ">
         <h6 className="shipping">shipping info</h6>
-        <div className="name-div">
-          <label>Your Address</label>
+        <div className="name-div  inputdiv">
+          <label className=" same">Your Address</label>
           <input
             className="inp-adr input"
             type="text"
             placeholder="1137 Williams Avenue"
           />
         </div>
-        <div className="zip-div ">
-          <label>ZIP Code</label>
-          <input className="inp-zip input" type="number" placeholder="10001" />
+        <div className="zip-div  inputdiv ">
+          <label className=" same">ZIP Code</label>
+          <input
+            className="inp-zip input"
+            type="text"
+            placeholder="10001"
+            maxLength={5}
+          />
         </div>
-        <div className="city-div">
-          <label>City</label>
+        <div className="city-div inputdiv">
+          <label className=" same">City</label>
           <input
             className="inp-city input"
             type="text"
             placeholder="New York"
           />
         </div>
-        <div className="country-div">
-          <label>Country</label>
+        <div className="country-div  inputdiv">
+          <label className=" same">Country</label>
           <input
             className="inp-country input"
             type="text"
@@ -76,7 +81,7 @@ function Checkout({ cartList, total }) {
       </div>
       <div className="payment-div">
         <h6 className="payment">payment details</h6>
-        <p className="method">Payment Method</p>
+        <p className="method  same">Payment Method</p>
         <div
           className="deliver"
           onClick={handleOptionChange}
@@ -91,7 +96,7 @@ function Checkout({ cartList, total }) {
             checked={select === "Cash on Delivery"}
           />
           <label
-            className="e-mone"
+            className="e-mone  same"
             for="radio"
             style={
               select === "Cash on Delivery"
@@ -102,7 +107,7 @@ function Checkout({ cartList, total }) {
           Cash on Delivery
         </div>
         <div
-          className="e-mon"
+          className="e-mon  same"
           onClick={handleOptionChange}
           style={select === "e-Money" ? { border: "1px solid #D87D4A" } : {}}
         >
@@ -120,18 +125,18 @@ function Checkout({ cartList, total }) {
           ></label>
         </div>
         <div className="emoney-div">
-          <div className="opt-one">
-            <label className="opt-emon-lab">e-Money Number</label>
+          <div className="opt-one inputdiv">
+            <label className="opt-emon-lab  same">e-Money Number</label>
             <input type="text" placeholder="238521993" />
           </div>
-          <div className="opt-two">
-            <label className="opt-emon-lab">e-Money PIN</label>
+          <div className="opt-two inputdiv">
+            <label className="opt-emon-lab  same">e-Money PIN</label>
             <input type="text" placeholder="6891" />
           </div>
         </div>
       </div>
       <section className="summery">
-        <h1 className="sum-title">SUMMERY</h1>
+        <h1 className="sum-title  same">SUMMERY</h1>
         <div>
           {cartList.map((item, index) => (
             <div key={index} className="cart-div">
@@ -148,16 +153,16 @@ function Checkout({ cartList, total }) {
         </div>
         <div className="sum-prices">
           <div className="total-prise">
-            <p>TOTAL</p>
-            <p className="b-prise">${total}</p>
+            <p className=" same">TOTAL</p>
+            <p className="b-prise  same">${total}</p>
           </div>
           <div className="shipping-add">
-            <p>SHIPPING</p>
-            <p className="ship-add">$50</p>
+            <p className=" same">SHIPPING</p>
+            <p className="ship-add  same">$50</p>
           </div>
           <div className="grand-add">
-            <p>GRAND TOTAL</p>
-            <p className="grand">{grandTotal}</p>
+            <p className=" same">GRAND TOTAL</p>
+            <p className="grand  same">${grandTotal}</p>
           </div>
         </div>
         <button type="button" className="summery-btn">

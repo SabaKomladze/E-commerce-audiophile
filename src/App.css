@@ -8,3 +8,8 @@
   margin-top: 86px;
   justify-content: center;
 }
+
+.main {
+  overflow-y: hidden;
+  max-width: 100vw;
+}

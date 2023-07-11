@@ -22,13 +22,13 @@ function App() {
   };
   useEffect(() => {
     if (cartActive) {
-      document.body.style.overflow = "hidden";
+      document.body.style.overflowY = "hidden";
     } else {
-      document.body.style.overflow = "visible";
+      document.body.style.overflowY = "auto";
     }
   }, [cartActive]);
   return (
-    <>
+    <div className="main">
       {cartActive ? (
         <>
           <div className="theme">
@@ -71,7 +71,7 @@ function App() {
           />
         </Routes>
       </MyContext.Provider>
-    </>
+    </div>
   );
 }
 

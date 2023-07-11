@@ -52,7 +52,37 @@
   cursor: pointer;
   left: -7.5px;
 }
-.b-prise,
-.grand {
+.same {
   color: black;
+}
+.inputdiv {
+  display: flex;
+  flex-direction: column;
+}
+input {
+  width: 280px;
+  height: 56px;
+  border-radius: 8px;
+  border: 1px solid #cfcfcf;
+  background: #fff;
+}
+::placeholder {
+  padding-left: 24px;
+}
+label {
+  color: #000;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.214px;
+}
+.billing,
+.shipping,
+.payment {
+  color: #d87d4a;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0.929px;
+  text-transform: uppercase;
 }
