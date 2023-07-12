@@ -36,3 +36,20 @@ nav {
   gap: 12px;
   margin-top: 48px;
 }
+@media (min-width: 768px) {
+  footer {
+    display: block;
+    padding: 64px 40px 46px;
+  }
+  nav {
+    flex-direction: row;
+  }
+  .footer-p {
+    text-align: left;
+  }
+  .copy-soc {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

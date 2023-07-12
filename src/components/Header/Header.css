@@ -11,3 +11,13 @@ header {
 .cart {
   cursor: pointer;
 }
+@media (min-width: 768px) {
+  header {
+    position: relative;
+    padding: 0 40px;
+  }
+  .logo {
+    position: absolute;
+    left: 100px;
+  }
+}

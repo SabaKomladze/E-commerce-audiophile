@@ -19,23 +19,25 @@ function Footer() {
         helping you get the most out of personal audio. Come and visit our demo
         facility - we’re open 7 days a week.
       </p>
-      <p className="copyright">Copyright 2021. All Rights Reserved</p>
-      <div className="social">
-        <img
-          src={"../assets/shared/desktop/icon-facebook.svg"}
-          alt="fb icon"
-          className="fb"
-        />
-        <img
-          src={"../assets/shared/desktop/icon-twitter.svg"}
-          alt="tw icon"
-          className="tw"
-        />
-        <img
-          src={"../assets/shared/desktop/icon-instagram.svg"}
-          alt="ig icon"
-          className="ig"
-        />
+      <div className="copy-soc">
+        <p className="copyright">Copyright 2021. All Rights Reserved</p>
+        <div className="social">
+          <img
+            src={"../assets/shared/desktop/icon-facebook.svg"}
+            alt="fb icon"
+            className="fb"
+          />
+          <img
+            src={"../assets/shared/desktop/icon-twitter.svg"}
+            alt="tw icon"
+            className="tw"
+          />
+          <img
+            src={"../assets/shared/desktop/icon-instagram.svg"}
+            alt="ig icon"
+            className="ig"
+          />
+        </div>
       </div>
     </footer>
   );
