@@ -1,0 +1,158 @@
+.prod-head-single-title {
+  color: #000;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 24px;
+}
+.prod-head-single-p {
+  color: #000;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 25px;
+  opacity: 0.5;
+  margin-top: 24px;
+}
+.price {
+  color: #000;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1.286px;
+  text-transform: uppercase;
+  margin-top: 24px;
+}
+.num {
+  width: 120px;
+  height: 48px;
+  background: #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+.number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+.single-btn {
+  width: 160px;
+  height: 48px;
+  background: #d87d4a;
+  color: #fff;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+}
+.min,
+.plus {
+  color: #000;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  opacity: 0.25;
+}
+.digit {
+  color: #000;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.gal {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.feat {
+  color: #000;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 0.857px;
+  text-transform: uppercase;
+  margin-top: 88px;
+}
+.describ {
+  color: #000;
+  font-size: 15px;
+  line-height: 25px;
+  opacity: 0.5;
+  margin-top: 24px;
+}
+.suggestion {
+  width: 100%;
+}
+.box {
+  color: #000;
+  margin: 88px 0 24px;
+}
+.x {
+  color: #d87d4a;
+}
+.list-span {
+  color: #000;
+  font-size: 15px;
+  line-height: 25px;
+  opacity: 0.5;
+  margin-left: 24px;
+  margin-top: 8px;
+}
+.singleProd {
+  padding: 0 24px;
+}
+.back {
+  color: #000;
+  font-size: 15px;
+  line-height: 25px;
+  opacity: 0.5;
+  padding: 16px;
+}
+.sug-img {
+  width: 100%;
+  height: auto;
+}
+.gallery {
+  margin-top: 88px;
+}
+.like {
+  color: #000;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 0.857px;
+  text-transform: uppercase;
+  margin: 120px 0 40px;
+}
+.sug-title {
+  color: #000;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1.714px;
+  text-transform: uppercase;
+}
+.first-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 32px auto 52px;
+}

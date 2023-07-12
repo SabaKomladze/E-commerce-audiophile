@@ -1,0 +1,158 @@
+.deliver,
+.e-mon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+  width: 280px;
+  height: 56px;
+  border-radius: 8px;
+  border: 1px solid #cfcfcf;
+  background: #fff;
+  color: black;
+}
+.deliver {
+  margin-bottom: 16px;
+}
+.method {
+  margin-bottom: 16px;
+}
+.e-mone {
+  color: black;
+}
+.radio {
+  display: none;
+}
+.e-mone {
+  content: "";
+  border: 1px solid #cfcfcf;
+  border-radius: 50%;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 20px;
+  cursor: pointer;
+  left: 21px;
+}
+.e-mone-sec {
+  content: "";
+  border: 1px solid #cfcfcf;
+  border-radius: 50%;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 20px;
+  cursor: pointer;
+  left: 21px;
+}
+.e-mone::before,
+.e-mone-sec::before {
+  content: "";
+  border: 1px solid #cfcfcf;
+  border-radius: 50%;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: -7px;
+  cursor: pointer;
+  left: -7px;
+}
+.same {
+  color: black;
+}
+.checkout-amount {
+  color: #000;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 25px;
+  opacity: 0.5;
+}
+.sum-div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+.total-left {
+  color: #000;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 25px;
+  opacity: 0.5;
+}
+.sum-prices {
+  margin-top: 32px;
+}
+.inputdiv {
+  display: flex;
+  flex-direction: column;
+}
+input {
+  width: 280px;
+  height: 56px;
+  border-radius: 8px;
+  border: 1px solid #cfcfcf;
+  background: #fff;
+  margin-top: 9px;
+}
+::placeholder {
+  padding-left: 24px;
+}
+label {
+  color: #000;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.214px;
+  margin-top: 24px;
+}
+.billing,
+.shipping,
+.payment {
+  color: #d87d4a;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0.929px;
+  text-transform: uppercase;
+  margin: 32px 0 16px;
+}
+.whole-checkout {
+  background-color: #fafafa;
+}
+.mainCheckout {
+  background-color: #ffffff;
+  width: 87.2%;
+  border-radius: 8px;
+  margin: 0 auto;
+  padding: 24px 23px;
+}
+.grand {
+  color: #d87d4a;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.summery-btn {
+  width: 279px;
+  height: 48px;
+  background: #d87d4a;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: none;
+  margin: 32px auto 0;
+  display: block;
+  cursor: pointer;
+}
+.carTlist{
+ width: 100%;
+ justify-content: space-between;
+}
+.summery{
+  margin-top: 32px;
+}
