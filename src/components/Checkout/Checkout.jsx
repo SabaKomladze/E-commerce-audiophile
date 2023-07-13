@@ -9,7 +9,17 @@ function Checkout({ cartList, total }) {
   const handleOptionChange = (e) => {
     setSelect(e.target.innerText);
   };
+  const [email, setEmail] = useState("");
+  const [emailVal, setEmailVal] = useState(true);
   let grandTotal = total + 50;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const emailCheck = (e) => {
+    const inputEmail = e.target.value;
+    setEmail(inputEmail);
+    const emailValid = emailRegex.test(inputEmail);
+    setEmailVal(emailValid);
+  };
+
   return (
     <div className="whole-checkout">
       <p className="back" onClick={goBack}>
@@ -32,6 +42,9 @@ function Checkout({ cartList, total }) {
               <label className=" same">Email</label>
               <input
                 className="inp-email input"
+                onChange={emailCheck}
+                value={email}
+                style={{ borderColor: emailVal ? "initial" : "red" }}
                 type="email"
                 placeholder="alexei@mail.com"
               />
