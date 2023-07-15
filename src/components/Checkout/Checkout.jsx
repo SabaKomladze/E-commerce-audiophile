@@ -19,9 +19,13 @@ function Checkout({ cartList, total }) {
     const emailValid = emailRegex.test(inputEmail);
     setEmailVal(emailValid);
   };
-
+  const [formSubmitted, setFormSubmitted] = useState(false);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setFormSubmitted(true);
+  };
   return (
-    <div className="whole-checkout">
+    <form className="whole-checkout">
       <p className="back" onClick={goBack}>
         Go Back
       </p>
@@ -33,7 +37,8 @@ function Checkout({ cartList, total }) {
             <div className="name-div inputdiv">
               <label className=" same">Name</label>
               <input
-                className="inp-name input"
+                required
+                className={`inp-name input ${formSubmitted && !nameInput.value && 'error'}`}
                 type="text"
                 placeholder="Alexei Ward"
               />
@@ -41,10 +46,11 @@ function Checkout({ cartList, total }) {
             <div className="email-div  inputdiv">
               <label className=" same">Email</label>
               <input
+                required
                 className="inp-email input"
                 onChange={emailCheck}
                 value={email}
-                style={{ borderColor: emailVal ? "initial" : "red" }}
+                style={{ borderColor: emailVal ? "initial" : "#ff0000" }}
                 type="email"
                 placeholder="alexei@mail.com"
               />
@@ -53,7 +59,8 @@ function Checkout({ cartList, total }) {
           <div className="num-div  inputdiv">
             <label className=" same">Phone Number</label>
             <input
-              className="inp-num input"
+              required
+              className={`inp-num input ${formSubmitted && !nameInput.value && 'error'}`}
               type="text"
               placeholder="+1 202-555-0136"
             />
@@ -64,7 +71,8 @@ function Checkout({ cartList, total }) {
           <div className="name-div  inputdiv">
             <label className=" same">Your Address</label>
             <input
-              className="inp-adr input"
+              required
+              className={`inp-adr input ${formSubmitted && !nameInput.value && 'error'}`}
               type="text"
               placeholder="1137 Williams Avenue"
             />
@@ -73,7 +81,8 @@ function Checkout({ cartList, total }) {
             <div className="zip-div  inputdiv ">
               <label className=" same">ZIP Code</label>
               <input
-                className="inp-zip input"
+                required
+                className={`inp-zip input ${formSubmitted && !nameInput.value && 'error'}`}
                 type="text"
                 placeholder="10001"
                 maxLength={5}
@@ -82,7 +91,8 @@ function Checkout({ cartList, total }) {
             <div className="city-div inputdiv">
               <label className=" same">City</label>
               <input
-                className="inp-city input"
+                required
+                className={`inp-city input ${formSubmitted && !nameInput.value && 'error'}`}
                 type="text"
                 placeholder="New York"
               />
@@ -91,7 +101,8 @@ function Checkout({ cartList, total }) {
           <div className="country-div  inputdiv">
             <label className=" same">Country</label>
             <input
-              className="inp-country input"
+              required
+              className={`inp-country input ${formSubmitted && !nameInput.value && 'error'}`}
               type="text"
               placeholder="United States"
             />
@@ -192,13 +203,13 @@ function Checkout({ cartList, total }) {
             <p className="grand  same">${grandTotal}</p>
           </div>
         </div>
-        <button type="button" className="summery-btn">
+        <button type="submit" className="summery-btn" onSubmit={handleSubmit}>
           CONTINUE & PAY
         </button>
       </section>
 
       <Footer />
-    </div>
+    </form>
   );
 }
 export default Checkout;
