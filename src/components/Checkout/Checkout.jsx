@@ -7,7 +7,7 @@ function Checkout({ cartList, total }) {
   };
   const [select, setSelect] = useState(null);
   const handleOptionChange = (e) => {
-    setSelect(e.target.innerText);
+    setSelect(e.currentTarget.innerText);
   };
   const [email, setEmail] = useState("");
   const [emailVal, setEmailVal] = useState(true);
@@ -110,12 +110,7 @@ function Checkout({ cartList, total }) {
                   : {}
               }
             >
-              <input
-                type="radio"
-                className="radio"
-                name="input"
-                checked={select === "Cash on Delivery"}
-              />
+              <input type="radio" className="radio" name="input" />
               <div
                 className="e-mone  same"
                 for="radio"
@@ -134,12 +129,7 @@ function Checkout({ cartList, total }) {
                 select === "e-Money" ? { border: "1px solid #D87D4A" } : {}
               }
             >
-              <input
-                type="radio"
-                className="radio"
-                name="input"
-                checked={select === "e-Money"}
-              />
+              <input type="radio" className="radio" name="input" />
               e-Money
               <div
                 for="radio"
@@ -150,16 +140,18 @@ function Checkout({ cartList, total }) {
               ></div>
             </div>
           </div>
-          <div className="emoney-div name-email">
-            <div className="opt-one inputdiv">
-              <label className="opt-emon-lab  same">e-Money Number</label>
-              <input type="text" placeholder="238521993" />
+          {select === "e-Money" ? (
+            <div className="emoney-div name-email">
+              <div className="opt-one inputdiv">
+                <label className="opt-emon-lab  same">e-Money Number</label>
+                <input type="text" placeholder="238521993" />
+              </div>
+              <div className="opt-two inputdiv">
+                <label className="opt-emon-lab  same">e-Money PIN</label>
+                <input type="text" placeholder="6891" />
+              </div>
             </div>
-            <div className="opt-two inputdiv">
-              <label className="opt-emon-lab  same">e-Money PIN</label>
-              <input type="text" placeholder="6891" />
-            </div>
-          </div>
+          ) : null}
         </div>
       </div>
       <section className="summery">
@@ -169,7 +161,7 @@ function Checkout({ cartList, total }) {
             <div key={index} className="cart-div carTlist">
               <div className="img-head-cost  carTlist">
                 <img src={item.image} alt={item.title} className="cart-img" />
-                <div className="title-price-cart">
+                <div className="title-price-cart middle-title">
                   <p className="cart-title">{item.title}</p>
                   <p className="cart-num">${item.price}</p>
                 </div>

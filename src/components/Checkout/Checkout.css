@@ -12,6 +12,7 @@
   border: 1px solid #cfcfcf;
   background: #fff;
   color: black;
+  z-index: 2;
 }
 .deliver {
   margin-bottom: 16px;
@@ -23,7 +24,17 @@
   color: black;
 }
 .radio {
-  display: none;
+  content: "";
+  opacity: 0;
+  border-radius: 50%;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 6px;
+  cursor: pointer;
+  left: 16px;
+  z-index: 1;
+  border: none;
 }
 .e-mone {
   content: "";
@@ -35,6 +46,7 @@
   top: 20px;
   cursor: pointer;
   left: 21px;
+  z-index: 1;
 }
 .e-mone-sec {
   content: "";
@@ -46,6 +58,7 @@
   top: 20px;
   cursor: pointer;
   left: 21px;
+  z-index: 1;
 }
 .e-mone::before,
 .e-mone-sec::before {
@@ -58,6 +71,7 @@
   top: -7px;
   cursor: pointer;
   left: -7px;
+  z-index: 1;
 }
 .same {
   color: black;
@@ -163,6 +177,9 @@ label {
   padding: 24px 23px;
 }
 .title-price-cart {
+  max-width: 250px;
+}
+.middle-title {
   width: 200px;
 }
 @media (min-width: 768px) {
