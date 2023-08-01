@@ -1,7 +1,7 @@
 import "./Checkout.css";
 import React, { useState } from "react";
 import Footer from "../folder/Footer";
-function Checkout({ cartList, total }) {
+function Checkout({ cartList, total, setDone }) {
   const goBack = () => {
     window.history.back();
   };
@@ -19,13 +19,15 @@ function Checkout({ cartList, total }) {
     const emailValid = emailRegex.test(inputEmail);
     setEmailVal(emailValid);
   };
-  const [formSubmitted, setFormSubmitted] = useState(false);
+  
   const handleSubmit = (e) => {
     e.preventDefault();
-    setFormSubmitted(true);
+    
+    setDone(true);
+    console.log(e);
   };
   return (
-    <form className="whole-checkout">
+    <form className="whole-checkout" onSubmit={handleSubmit}>
       <p className="back" onClick={goBack}>
         Go Back
       </p>
@@ -38,7 +40,7 @@ function Checkout({ cartList, total }) {
               <label className=" same">Name</label>
               <input
                 required
-                className={`inp-name input ${formSubmitted && !nameInput.value && 'error'}`}
+               
                 type="text"
                 placeholder="Alexei Ward"
               />
@@ -60,7 +62,7 @@ function Checkout({ cartList, total }) {
             <label className=" same">Phone Number</label>
             <input
               required
-              className={`inp-num input ${formSubmitted && !nameInput.value && 'error'}`}
+              
               type="text"
               placeholder="+1 202-555-0136"
             />
@@ -72,7 +74,7 @@ function Checkout({ cartList, total }) {
             <label className=" same">Your Address</label>
             <input
               required
-              className={`inp-adr input ${formSubmitted && !nameInput.value && 'error'}`}
+             
               type="text"
               placeholder="1137 Williams Avenue"
             />
@@ -82,7 +84,7 @@ function Checkout({ cartList, total }) {
               <label className=" same">ZIP Code</label>
               <input
                 required
-                className={`inp-zip input ${formSubmitted && !nameInput.value && 'error'}`}
+              
                 type="text"
                 placeholder="10001"
                 maxLength={5}
@@ -92,7 +94,7 @@ function Checkout({ cartList, total }) {
               <label className=" same">City</label>
               <input
                 required
-                className={`inp-city input ${formSubmitted && !nameInput.value && 'error'}`}
+               
                 type="text"
                 placeholder="New York"
               />
@@ -102,7 +104,7 @@ function Checkout({ cartList, total }) {
             <label className=" same">Country</label>
             <input
               required
-              className={`inp-country input ${formSubmitted && !nameInput.value && 'error'}`}
+              
               type="text"
               placeholder="United States"
             />
@@ -195,11 +197,8 @@ function Checkout({ cartList, total }) {
             <p className="grand  same">${grandTotal}</p>
           </div>
         </div>
-        <button type="submit" className="summery-btn" onSubmit={handleSubmit}>
-          CONTINUE & PAY
-        </button>
+        <input type="submit" value={"CONTINUE & PAY"} className="summery-btn" />
       </section>
-
       <Footer />
     </form>
   );

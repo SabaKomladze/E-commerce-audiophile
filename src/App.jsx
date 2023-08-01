@@ -12,11 +12,13 @@ import ScrollToTop from "../utils/scrollTop";
 import Cart from "./components/Cart/Cart";
 import Checkout from "./components/Checkout/Checkout";
 import { useEffect } from "react";
+import Done from "./components/Done/Done";
 function App() {
   const [childInfo, setChildInfo] = useState("");
   const [cartList, setCartList] = useState([]);
   const [cartActive, setCartActive] = useState(false);
   const [total, setTotal] = useState(0);
+  const [done, setDone] = useState(false);
   const handleChildInfo = (info) => {
     setChildInfo(info);
   };
@@ -29,6 +31,11 @@ function App() {
   }, [cartActive]);
   return (
     <div className="main">
+      {done ? (
+        <div className="theme">
+          <Done setDone={setDone} done={done} cartList={cartList} />
+        </div>
+      ) : null}
       {cartActive ? (
         <>
           <div className="theme">
@@ -66,6 +73,7 @@ function App() {
                 setCartList={setCartList}
                 total={total}
                 setTotal={setTotal}
+                setDone={setDone}
               />
             }
           />
