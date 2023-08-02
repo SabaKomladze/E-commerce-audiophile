@@ -1,5 +1,6 @@
 import "./Done.css";
-function Done({ cartList, setDone }) {
+function Done({ cartList, setDone, total }) {
+  let numOfItems = cartList.length - 1;
   return (
     <div className="done-div">
       <img
@@ -15,9 +16,9 @@ function Done({ cartList, setDone }) {
         You will receive an email confirmation shortly.
       </p>
       <div className="bought">
-        <div>
+        <div className="done-list">
           {cartList.length > 0 && (
-            <div className="cart-div carTlist">
+            <div className="cart-div carTlist cartDiv">
               <div className="img-head-cost  carTlist">
                 <img
                   src={cartList[0].image}
@@ -32,12 +33,18 @@ function Done({ cartList, setDone }) {
               </div>
             </div>
           )}
+          <hr />
+          <p className="num-of-items">and {numOfItems} other item(s)</p>
         </div>
+
         <div className="done-price">
           <h4 className="grandTotal">GRAND TOTAL</h4>
-          <p className="done-price">$</p>
+          <p className="done-price-$">$ {total}</p>
         </div>
       </div>
+      <button type="button" className="done-btn">
+        BACK TO HOME
+      </button>
     </div>
   );
 }

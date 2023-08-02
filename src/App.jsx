@@ -33,7 +33,12 @@ function App() {
     <div className="main">
       {done ? (
         <div className="theme">
-          <Done setDone={setDone} done={done} cartList={cartList} />
+          <Done
+            setDone={setDone}
+            done={done}
+            cartList={cartList}
+            total={total}
+          />
         </div>
       ) : null}
       {cartActive ? (
