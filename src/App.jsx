@@ -42,7 +42,7 @@ function App() {
         </div>
       ) : null}
       {cartActive ? (
-        <>
+        <div className="theme-div" >
           <div className="theme">
             <Cart
               cartList={cartList}
@@ -52,7 +52,7 @@ function App() {
               setTotal={setTotal}
             />
           </div>
-        </>
+        </div>
       ) : null}
       <Header setCartActive={setCartActive} cartActive={cartActive} />
       <ScrollToTop />
