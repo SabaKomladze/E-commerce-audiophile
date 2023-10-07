@@ -1,12 +1,13 @@
 .theme {
   width: 100vw;
-  height: 100vh;
+  height: 2459px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
   position: absolute;
   z-index: 1;
   display: flex;
   margin-top: 86px;
   justify-content: center;
+  z-index: 3;
 }
 
 .main {

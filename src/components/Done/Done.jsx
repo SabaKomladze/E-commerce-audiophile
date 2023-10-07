@@ -7,9 +7,6 @@ function Done({ cartList, setDone, total }) {
         src="../assets/checkout/icon-order-confirmation.svg"
         alt="confirm logo"
         className="confirm"
-        onClick={() => {
-          setDone(false);
-        }}
       />
       <h1 className="thanks done-text">THANK YOU FOR YOUR ORDER</h1>
       <p className="email-recive done-text">
@@ -42,7 +39,13 @@ function Done({ cartList, setDone, total }) {
           <p className="done-price-$">$ {total}</p>
         </div>
       </div>
-      <button type="button" className="done-btn">
+      <button
+        type="button"
+        className="done-btn"
+        onClick={() => {
+          setDone(false);
+        }}
+      >
         BACK TO HOME
       </button>
     </div>

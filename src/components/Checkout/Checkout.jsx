@@ -1,6 +1,7 @@
 import "./Checkout.css";
 import React, { useState } from "react";
 import Footer from "../folder/Footer";
+
 function Checkout({ cartList, total, setDone }) {
   const goBack = () => {
     window.history.back();
@@ -24,8 +25,12 @@ function Checkout({ cartList, total, setDone }) {
     e.preventDefault();
     
     setDone(true);
-    console.log(e);
+   
   };
+  let toTop =  window.scrollTo({
+    top: 0,
+    behavior: 'smooth' 
+  });
   return (
     <form className="whole-checkout" onSubmit={handleSubmit}>
       <p className="back" onClick={goBack}>
@@ -197,7 +202,9 @@ function Checkout({ cartList, total, setDone }) {
             <p className="grand  same">${grandTotal}</p>
           </div>
         </div>
-        <input type="submit" value={"CONTINUE & PAY"} className="summery-btn" />
+        <input type="submit" value={"CONTINUE & PAY"} className="summery-btn" onClick={()=>{
+          toTop();
+        }} />
       </section>
       <Footer />
     </form>
