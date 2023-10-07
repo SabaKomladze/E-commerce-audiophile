@@ -55,7 +55,7 @@
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1000px) {
   .first {
     background-image: url(./assets/home/desktop/image-hero.jpg);
   }

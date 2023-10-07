@@ -34,3 +34,8 @@
 .bring-text {
   margin: 40px 0 32px;
 }
+@media (min-width: 700px) {
+  .man {
+    background-image: url(../assets/shared/tablet/image-best-gear.jpg);
+  }
+}

@@ -40,3 +40,19 @@
   width: 120px;
   height: auto;
 }
+@media (min-width: 768px) {
+  .cat-style {
+    max-width: 223px;
+    width: 100%;
+    max-height: 191px;
+  }
+  .ear-cat {
+    max-width: 223px;
+    width: 100%;
+  }
+  .cat {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
